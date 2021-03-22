@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validator", "Validator\Validator.csproj", "{9D886DB1-B1B4-46C6-B451-3E947D7CEA34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validator.Test", "Validator.Test\Validator.Test.csproj", "{D367A645-A3FE-4A84-8772-22C0DE0EB2F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D886DB1-B1B4-46C6-B451-3E947D7CEA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D886DB1-B1B4-46C6-B451-3E947D7CEA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D886DB1-B1B4-46C6-B451-3E947D7CEA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D886DB1-B1B4-46C6-B451-3E947D7CEA34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D367A645-A3FE-4A84-8772-22C0DE0EB2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D367A645-A3FE-4A84-8772-22C0DE0EB2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D367A645-A3FE-4A84-8772-22C0DE0EB2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D367A645-A3FE-4A84-8772-22C0DE0EB2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

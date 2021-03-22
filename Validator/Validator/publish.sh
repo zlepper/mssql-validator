@@ -1,0 +1,1 @@
+dotnet publish -c Release --runtime=linux-x64 --self-contained true -p:PublishSingleFile=true -p:PublishReadyToRun=true -o /app

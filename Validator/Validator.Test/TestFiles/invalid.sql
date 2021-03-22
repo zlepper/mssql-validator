@@ -1,0 +1,1 @@
+﻿insrt into MyTable;

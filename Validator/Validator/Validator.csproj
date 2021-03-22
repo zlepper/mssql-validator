@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimMode>link</TrimMode>
+        <TrimmerRootAssembly>Validator.dll</TrimmerRootAssembly>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommandLineParser" Version="2.8.0" />
+      <PackageReference Include="DotNet.Glob" Version="3.1.2" />
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.2" />
+    </ItemGroup>
+
+</Project>
