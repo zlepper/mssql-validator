@@ -10,3 +10,6 @@ runs:
   args:
     - "-p"
     - "${{ inputs.pattern }}"
+branding: 
+  icon: database
+  color: red

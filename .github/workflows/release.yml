@@ -1,0 +1,26 @@
+name: 'Release'
+
+on:
+  release:
+    types:
+      - created
+        
+jobs: 
+  publish-release:
+    name: 'Publish new Release'
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to Docker hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Pull existing image
+        run: |
+          docker pull zlepper/mssql-validator:${{ github.sha }}
+          docker tag zlepper/mssql-validator:${{ github.sha }} zlepper/mssql-validator:${{ github.event.release.tag_name }}
+          docker push zlepper/mssql-validator:${{ github.event.release.tag_name }}
