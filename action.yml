@@ -1,0 +1,12 @@
+name: 'MSSQL Validation'
+description: 'Validated that the content of a set of sql files are actually valid T-SQL'
+inputs:
+  pattern: 
+    description: 'The file pattern to use when searching for files'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://zlepper/mssql-validator:latest'
+  args:
+    - "-p"
+    - "${{ inputs.pattern }}"
