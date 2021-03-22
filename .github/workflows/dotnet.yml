@@ -43,5 +43,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: zlepper/mssql-validator:latest zlepper/mssql-validator:${{ github.sha }}
+          tags: |
+            zlepper/mssql-validator:latest 
+            zlepper/mssql-validator:${{ github.sha }}
       
