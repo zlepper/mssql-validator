@@ -9,8 +9,6 @@ jobs:
   publish-release:
     name: 'Publish new Release'
     runs-on: ubuntu-latest
-    needs:
-      - build
     steps:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
