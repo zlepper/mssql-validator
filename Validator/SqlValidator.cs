@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 
@@ -32,7 +33,7 @@ namespace Validator
 
         public async Task<TestResult> TestSql(string sql, string filename)
         {
-            var actualQuery = "SET PARSEONLY ON;\n" + sql;
+            var actualQuery = "SET PARSEONLY ON;\n" + Regex.Replace(sql, "\nGO(\n|$)", "\n\n");
             
             await using var conn = new SqlConnection(_connectionString);
             await conn.OpenAsync();
